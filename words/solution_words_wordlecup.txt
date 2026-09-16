@@ -757,6 +757,7 @@ login
 loose
 lorry
 loser
+lotus
 lousy
 lover
 lower
