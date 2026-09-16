@@ -271,6 +271,7 @@ click
 cliff
 climb
 cling
+cloak
 clock
 clone
 close
