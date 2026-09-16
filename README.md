@@ -1,9 +1,26 @@
-# Perfect Wordle Solver
+1. Fork your own copy of [nkoppel/OptimalWordleSolver](https://github.com/nkoppel/OptimalWordleSolver)
 
-Uses an optimized brute-force search to find strategies for [wordle](https://www.nytimes.com/games/wordle/index.html) with the minimum possible average game length. From it's computation, the optimal starting word is "salet", and the optimal average game length is 3.4223.
+2. Upload your own custom list of guess and solution words to `/words`, if any
+   
+   Under `/src`, edit the txt paths in `words.rs` accordingly
 
-There are two included solution files, "2309\_solution.txt", which contains the strategy for the case where only solution words are guessable, and "full\_solution.txt", which contains the strategy using all guess words. On a single core, the former takes three minutes and 2.5 gigabytes of memory, while the latter takes and hour and 10 minutes and about 20 gigabytes of memory. I have not yet implemented any interface for interacting with these solution files, so for now searching through them with control-f works.
+4. Return to the **repo** root and select **Code** > **Codespaces** > **Create codespace on main**
 
-## How it works
+5. Once you're redirected to the Codespace, run the following commands: 
+   ```
+   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+   ```
+   Enter `1` when prompted
+   ```
+   source "$HOME/.cargo/env"
+   ```
+   ```
+   rustup default nightly
+   ```
+   ```
+   cargo run
+   ```
 
-The core idea behind this program is that we don't have to spend any time on a guess word if we know it to be worse than the best guess word. To that end, the program begins by computing a lower bound of the game length after each guess, by finding a weighted average of the minimum game length after each hint. It then repeatedly increases the lower bound of the guess with the lowest lower bound by applying the same process to one of the resulting lists of words after the best guess and a hint, doing this recursively if necessary. In this way, it spares a huge amount of computation by only spending time searching the word it thinks to be the best each iteration.
+6. Download the output `solution.txt` from the Codespace and upload it to [ylarp.github.io/wordle](https://ylarp.github.io/wordle)
+
+   Use `//` for single-line comments or `/* */` for multi-line comments in `solution.txt`
