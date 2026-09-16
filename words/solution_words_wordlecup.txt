@@ -1014,6 +1014,7 @@ quiet
 quill
 quilt
 quirk
+quite
 quota
 quote
 rabbi
