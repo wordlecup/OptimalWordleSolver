@@ -1,10 +1,10 @@
-1. Fork your own copy of [nkoppel/OptimalWordleSolver](https://github.com/nkoppel/OptimalWordleSolver)
+1. Fork [nkoppel/OptimalWordleSolver](https://github.com/nkoppel/OptimalWordleSolver)
 
 2. Upload your own custom list of guess and solution words to `/words`, if any
    
    Under `/src`, edit the txt paths in `words.rs` accordingly
 
-4. Return to the **repo** root and select **Code** > **Codespaces** > **Create codespace on main**
+4. Return to the homepage and select **Code** > **Codespaces** > **Create codespace on main**
 
 5. Once you're redirected to the Codespace, run the following commands: 
    ```
